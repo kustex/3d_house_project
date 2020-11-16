@@ -14,20 +14,20 @@ import plotly.graph_objects as go
 img = rasterio.open('data/geotif/dsm/DHMVIIDSMRAS1m_k13.tif')
 
 #convert DMS to DD
-degrees_coordinate_long = float(input("What are the degrees of your longitude coordinate?"))
-minutes_coordinate_long = float(input("What are the minutes of your longitude coordinate?"))
-seconds_coordinate_long = float(input("What are the seconds of your longitude coordinate?")) 
+degrees_coordinate_long = float(input("What are the degrees of your longitude coordinate? "))
+minutes_coordinate_long = float(input("What are the minutes of your longitude coordinate? "))
+seconds_coordinate_long = float(input("What are the seconds of your longitude coordinate? ")) 
 dd_long = degrees_coordinate_long + (minutes_coordinate_long/60) + (seconds_coordinate_long/3600)
 
-degrees_coordinate_lat = float(input("What are the degrees of your latitude coordinate?"))
-minutes_coordinate_lat= float(input("What are the minutes of your latitude coordinate?"))
-seconds_coordinate_lat = float(input("What are the seconds of your latitude coordinate?")) 
+degrees_coordinate_lat = float(input("What are the degrees of your latitude coordinate? "))
+minutes_coordinate_lat= float(input("What are the minutes of your latitude coordinate? "))
+seconds_coordinate_lat = float(input("What are the seconds of your latitude coordinate? ")) 
 dd_lat = degrees_coordinate_lat + (minutes_coordinate_lat/60) + (seconds_coordinate_lat/3600)
 
 #transform from long, lat (degrees) to x, y coordinates
 transformer = Transformer.from_crs(4326,31370)
 x, y = transformer.transform(dd_long, dd_lat)
-print(x,y)
+
 #create bounding box around x, y coordinates
 x_left = x - 50
 x_right = x + 50

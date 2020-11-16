@@ -2,13 +2,11 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib import cm
 from mpl_toolkits.basemap import Basemap
 import geopandas as gpd
 import rasterio
 from rasterio.windows import from_bounds
 from rasterio.enums import Resampling
-from rasterio.plot import show
 import pyproj
 from pyproj import Transformer
 import plotly.graph_objects as go

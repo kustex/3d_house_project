@@ -29,10 +29,10 @@ transformer = Transformer.from_crs(4326,31370)
 x, y = transformer.transform(dd_long, dd_lat)
 
 #create bounding box around x, y coordinates
-x_left = x - 50
-x_right = x + 50
-y_top = y + 50
-y_bottom = y - 50
+x_left = x - 25
+x_right = x + 25
+y_top = y + 25
+y_bottom = y - 25
 
 #read and plot the GeoTiff file
 rst = img.read(1, window=from_bounds(x_left, y_bottom, x_right, y_top, img.transform))

@@ -8,7 +8,7 @@ The script was based on this part of Belgium, because we knew that our coach wou
 Place: St. Salvator's Cathedral Bruge, Belgium<br>
 Coordinates: long: 51°12'19.8" lat: 3°13'17.0"<br>
 
-![st_salvathor_cathedral_bruge](./st_salvathor.png)
+![st_salvathor_cathedral_bruge](st_salvathor_bruge.png)
 
 #### Why:
 This project was the first soloproject we got during the ai data operator bootcamp at BeCode. The goal was to 'consolidate' our knowledge of certain packages (numpy, pandas, matplotlib) that we learned to use during the first month of the bootcamp. Working with new libraries was also part of the challenge.  

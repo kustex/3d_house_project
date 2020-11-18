@@ -1,17 +1,13 @@
 #!/usr/bin/env python
 
 import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.basemap import Basemap
 import geopandas as gpd
 import rasterio
-from rasterio.windows import from_bounds
-from rasterio.enums import Resampling
 import pyproj
-from pyproj import Transformer
 import plotly.graph_objects as go
-
-img = rasterio.open('data/geotif/dsm/DHMVIIDSMRAS1m_k13.tif')
+from pyproj import Transformer
+from rasterio.enums import Resampling
+from rasterio.windows import from_bounds
 
 #convert DMS to DD
 degrees_coordinate_long = float(input("What are the degrees of your longitude coordinate? "))
@@ -35,11 +31,13 @@ y_top = y + 25
 y_bottom = y - 25
 
 #read and plot the GeoTiff file
+img = rasterio.open('data/geotif/dsm/DHMVIIDSMRAS1m_k13.tif')
 rst = img.read(1, window=from_bounds(x_left, y_bottom, x_right, y_top, img.transform))
 
 #making geodataframe out of ndarray of selection for Geotiff file
 rst_gdf = gpd.GeoDataFrame(rst)
 
+#making 3d plot 
 fig = go.Figure(data=[go.Surface(z=rst_gdf.values)])
 fig.update_layout(title='Surface plot', autosize=True)
 fig.show()

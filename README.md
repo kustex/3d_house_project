@@ -1,7 +1,7 @@
 ### 3d house project
 
 #### What:
-Based on input coordinates (degrees minutes seconds) give me 3d plot of the place (currently only for part 13 on the NGI map: http://www.geopunt.be/catalogus/datasetfolder/5be63750-0f1c-46e2-b60f-479a2b6cbcc7). 
+Based on input coordinates (degrees minutes seconds) give me 3d plot of the place (currently only for part 13 on the NGI map: http://www.geopunt.be/catalogus/datasetfolder/5be63750-0f1c-46e2-b60f-479a2b6cbcc7).\ 
 The script was based on this part of Belgium, because we knew that our coach would only give coordinates of his house during the live presentation of the project.  
 
 #### Why:
@@ -11,8 +11,9 @@ This project was the first soloproject we got during the ai data operator bootca
 I made this script in the week from the 9th - 15th november 2020. 
 
 #### How:
-Using python 
-The geotiff file used in the script is located inside the k_13.zip. You can find it at: http://www.geopunt.be/download?container=dhm-vlaanderen-ii-dsm-raster-1m&title=Digitaal%20Hoogtemodel%20Vlaanderen%20II,%20DSM,%20raster,%201m
+Using python\ 
+The geotiff file used in the script is located inside the k_13.zip.\ 
+You can find it at: http://www.geopunt.be/download?container=dhm-vlaanderen-ii-dsm-raster-1m&title=Digitaal%20Hoogtemodel%20Vlaanderen%20II,%20DSM,%20raster,%201m
 - step 1. Take dms coordinates input of user.
 - step 2. Convert dms coordinates to decimal degree coordinates.
 - step 3. Using pyproj, convert dd coordinates to x,y lambert 72 (epsg 31370), because our geotiff file is based on this coordinate reference system.  

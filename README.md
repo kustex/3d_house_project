@@ -8,6 +8,10 @@ The script was based on this part of Belgium, because we knew that our coach wou
 Place: St. Salvator's Cathedral Bruge, Belgium<br>
 Coordinates: long: 51°12'19.8" lat: 3°13'17.0"<br>
 
+<p> align="center">
+    <img src="../st_salvathor_bruge.png" width="350" title="St Salvathor Cathedral Bruge">
+</p>
+
 ![st_salvathor_cathedral_bruge](st_salvathor_bruge.png)
 
 #### Why:

@@ -13,7 +13,7 @@ I made this script in the week from the 9th - 15th november 2020.
 #### How:
 <p>Using python<br> 
 The geotiff file used in the script is located inside the k_13.zip.<br> 
-You can find it at: http://www.geopunt.be/download?container=dhm-vlaanderen-ii-dsm-raster-1m&title=Digitaal%20Hoogtemodel%20Vlaanderen%20II,%20DSM,%20raster,%201m
+You can find it at: http://www.geopunt.be/download?container=dhm-vlaanderen-ii-dsm-raster-1m&title=Digitaal%20Hoogtemodel%20Vlaanderen%20II,%20DSM,%20raster,%201m</p>
 - step 1. Take dms coordinates input of user.
 - step 2. Convert dms coordinates to decimal degree coordinates.
 - step 3. Using pyproj, convert dd coordinates to x,y lambert 72 (epsg 31370), because our geotiff file is based on this coordinate reference system.  
@@ -21,7 +21,7 @@ You can find it at: http://www.geopunt.be/download?container=dhm-vlaanderen-ii-d
 - step 5. Open geotiff file using rasterio.
 - step 6. With rasterio package read in bounding-box from geotiff file and save to variable. 
 - step 7. Make pandas dataframe out of variable using geopandas or pandas. 
-- step 8. Make 3d plot out of dataframe using plotly.<p>
+- step 8. Make 3d plot out of dataframe using plotly.
 
 #### Who:
 Lucas Kustermans aka Kustex

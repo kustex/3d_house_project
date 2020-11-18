@@ -5,7 +5,7 @@
 The script was based on this part of Belgium, because we knew that our coach would only give coordinates of his house during the live presentation of the project.  
 
 #### Why:
-This project was the first soloproject we got during the ai data operator bootcamp at BeCode. 
+This project was the first soloproject we got during the ai data operator bootcamp at BeCode. The goal was to 'consolidate' our knowledge of pandas, matplotlib and numpy that we learned during the first month of the bootcamp. Working with new libraries was also part of the challenge.  
 
 #### When:
 I made this script in the week from the 9th - 15th november 2020. 

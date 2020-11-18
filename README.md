@@ -12,7 +12,7 @@ Coordinates: long: 51°12'19.8" lat: 3°13'17.0"<br>
     <img src="st_salvathor_bruge.png" width="350" title="St Salvathor Cathedral Bruge">
 </p>
 
-![st_salvathor_cathedral_bruge](st_salvathor_bruge.png)
+![st_salvathor_cathedral_bruge](/home/kustex/Documents/repos/3d_house_project/st_salvathor_bruge.png)
 
 #### Why:
 This project was the first soloproject we got during the ai data operator bootcamp at BeCode. The goal was to 'consolidate' our knowledge of certain packages (numpy, pandas, matplotlib) that we learned to use during the first month of the bootcamp. Working with new libraries was also part of the challenge.  

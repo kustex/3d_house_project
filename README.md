@@ -9,7 +9,7 @@ Place: St. Salvator's Cathedral Bruge, Belgium<br>
 Coordinates: long: 51°12'19.8" lat: 3°13'17.0"<br>
 
 <p align="center">
-    <img src="/assets/st_salvathor_bruge.png" width="350" height="240">
+    <img src="/assets/st_salvathor_bruge.png" width="350" height="350">
 </p>
 
 #### Why:

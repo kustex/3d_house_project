@@ -12,8 +12,6 @@ from dash.dependencies import Input, Output, State
 from pyproj import Transformer
 from rasterio.enums import Resampling
 from rasterio.windows import from_bounds
-from flask import Flask
-from gevent.pywsgi import WSGIServer
 from dms2dec.dms_convert import dms2dec
 
 

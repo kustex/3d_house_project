@@ -1,7 +1,7 @@
-### 3d house project
+# 3d house project
 
 #### What:
-<p>Based on input coordinates (degrees minutes seconds) give me 3d plot of the place (currently only for part 13 on the NGI map: http://www.geopunt.be/catalogus/datasetfolder/5be63750-0f1c-46e2-b60f-479a2b6cbcc7).<br> 
+<p>Based on input coordinates (degrees minutes seconds) this script will give a 3d plot of the place on the Dash platform. Currently it is only applicable for coordinates based on part 13 of the NGI map: http://www.geopunt.be/catalogus/datasetfolder/5be63750-0f1c-46e2-b60f-479a2b6cbcc7).<br> 
 The script was based on this part of Belgium, because we knew that our coach would only give coordinates of his house during the live presentation of the project.  
 
 #### Example:

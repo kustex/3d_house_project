@@ -18,19 +18,29 @@ This project was the first soloproject we got during the ai data operator bootca
 #### When:
 I made this script in the week from the 9th - 15th november 2020. 
 
-#### How:
+#### How to make it work on your local pc:
 Using python<br> 
 The geotiff file used in the script is located inside the k_13.zip.<br> 
 You can find it at: http://www.geopunt.be/download?container=dhm-vlaanderen-ii-dsm-raster-1m&title=Digitaal%20Hoogtemodel%20Vlaanderen%20II,%20DSM,%20raster,%201m</p>
 
-- step 1. Take dms coordinates input(float) of user.
-- step 2. Convert dms coordinates to decimal degree coordinates.
-- step 3. Using pyproj, convert dd coordinates to x,y lambert 72 (epsg 31370), because our geotiff file is based on this coordinate reference system.  
-- step 4. Create bounding box around the x y coordinate.
-- step 5. Open geotiff file using rasterio.
-- step 6. With rasterio package read in bounding-box from geotiff file and save to variable. 
-- step 7. Make pandas dataframe out of variable using geopandas or pandas. 
-- step 8. Make 3d plot out of dataframe using plotly.
+1. Clone the repository on your local device  
+2. Cd to the directory where the repo is located  
+3. Create new virtualenv or activate your virtualenv  
+4. run 'pip install -r requirements.txt' in your shell
+5. run 'mkdir data' in your shell
+6. Copy the DHVIIDSMRAS1m_k13.tif file from the k_13.zip to the 'data' folder   
+7. run 'python model_3d_house_project.py' in you shell  
+8. Take dms coordinates input(float) of user.  
+
+#### Flow of the script:
+1. Take dms coordinates input(float) of user.
+2. Convert dms coordinates to decimal degree coordinates.
+3. Using pyproj, convert dd coordinates to x,y lambert 72 (epsg 31370), because our geotiff file is based on this coordinate reference system.  
+4. Create bounding box around the x y coordinate.
+5. Open geotiff file using rasterio.
+6. With rasterio package read in bounding-box from geotiff file and save to variable. 
+7. Make pandas dataframe out of variable using geopandas or pandas. 
+8. Make 3d plot out of dataframe using plotly.
 
 #### Who:
 Lucas Kustermans aka Kustex

@@ -16,7 +16,7 @@ from dms2dec.dms_convert import dms2dec
 
 
 #read and plot the GeoTiff file
-img = rasterio.open('data/geotif/dsm/DHMVIIDSMRAS1m_k13.tif')
+img = rasterio.open('data/DHMVIIDSMRAS1m_k13.tif')
 
 #transform from long, lat (degrees) to x, y coordinates
 transformer = Transformer.from_crs(4326,31370)
@@ -30,24 +30,24 @@ app.layout = html.Div(style={"font-family":"verdana"}, children=[
     ),
 
     html.Div(id='inputs', style={"textAlign":"center"}, children=[
-        html.H3("Longitude:"),
+        html.H3("Latitude:"),
         #ask for longitude input on dash platform
         html.Div(className='coordinate_input', children=[
-            dcc.Input(id="long_d", value='51', placeholder="Input longitude degrees"
+            dcc.Input(id="long_d", value='', placeholder="Input latitude degrees"
             ),
-            dcc.Input(id="long_m", value='12', placeholder="Input longitude minutes"
+            dcc.Input(id="long_m", value='', placeholder="Input latitude minutes"
             ),
-            dcc.Input(id="long_s", value='30.1', placeholder="Input longitude seconds"
+            dcc.Input(id="long_s", value='', placeholder="Input latitude seconds"
         )]),
 
-        html.H3("Latitude:"),
+        html.H3("Longitude:"),
         #ask for latitude input on dash platform
         html.Div(className='coordinate_input', children=[
-            dcc.Input(id="lat_d", value='3', placeholder="Input latitude degrees"
+            dcc.Input(id="lat_d", value='', placeholder="Input longitude degrees"
             ),
-            dcc.Input(id="lat_m", value='13', placeholder="Input latitude minutes"
+            dcc.Input(id="lat_m", value='', placeholder="Input longitude minutes"
             ),
-            dcc.Input(id="lat_s", value='29.3', placeholder="Input latitude seconds"
+            dcc.Input(id="lat_s", value='', placeholder="Input longitude seconds"
         )]),
         html.Br(), 
         #make button 
@@ -62,7 +62,7 @@ app.layout = html.Div(style={"font-family":"verdana"}, children=[
 
 #dash callback
 @app.callback(
-    Output("output_container", "figure"),
+    Output("output_container", "figure"), 
     [Input('button', 'n_clicks')],
     state=[State("long_d", 'value'),
         State("long_m", 'value'),
@@ -72,17 +72,17 @@ app.layout = html.Div(style={"font-family":"verdana"}, children=[
         State("lat_s", 'value')
 ])
 
-def number_render(button, long_d, long_m, long_s, lat_d, lat_m, lat_s):
+def plotly_plot(button, long_d, long_m, long_s, lat_d, lat_m, lat_s):
     #convert dms to dd coordinate
     dd_long = dms2dec(f'''{long_d}°{long_m}'{long_s}"N''')
     dd_lat = dms2dec(f'''{lat_d}°{lat_m}'{lat_s}"E''')
     #convert dd to lambert 72
     x, y = transformer.transform(dd_long, dd_lat)
     #create bounding box
-    x_left = x - 100
-    x_right = x + 100
-    y_top = y + 100
-    y_bottom = y - 100
+    x_left = x - 30
+    x_right = x + 30
+    y_top = y + 30
+    y_bottom = y - 30
     #read in bounding box
     rst = img.read(1, window=from_bounds(x_left, y_bottom, x_right, y_top, img.transform))
     #create geopandas dataframe out of bounding box

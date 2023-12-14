@@ -40,7 +40,7 @@ You can find it at: http://www.geopunt.be/download?container=dhm-vlaanderen-ii-d
 5. Open geotiff file using rasterio.  
 6. With rasterio package read in bounding-box from geotiff file and save to variable.  
 7. Make pandas dataframe out of variable using geopandas or pandas.  
-8. Make 3d plot out of dataframe using plotly.
+8. Make 3d plot out of dataframe using plotly.  
 
 <h2>Who:</h2>
 Lucas Kustermans aka Kustex

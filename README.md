@@ -33,14 +33,14 @@ You can find it at: http://www.geopunt.be/download?container=dhm-vlaanderen-ii-d
 8. Take dms coordinates input(float) of user.  
 
 <h2>Flow of the script:</h2>
-1. Take dms coordinates input(float) of user.  
-2. Convert dms coordinates to decimal degree coordinates.  
-3. Using pyproj, convert dd coordinates to x,y lambert 72 (epsg 31370), because our geotiff file is based on this coordinate reference system.  
-4. Create bounding box around the x y coordinate.  
-5. Open geotiff file using rasterio.  
-6. With rasterio package read in bounding-box from geotiff file and save to variable.  
-7. Make pandas dataframe out of variable using geopandas or pandas.  
-8. Make 3d plot out of dataframe using plotly.  
+* Take dms coordinates input(float) of user.  
+* Convert dms coordinates to decimal degree coordinates.  
+* Using pyproj, convert dd coordinates to x,y lambert 72 (epsg 31370), because our geotiff file is based on this coordinate reference system.  
+* Create bounding box around the x y coordinate.  
+* Open geotiff file using rasterio.  
+* With rasterio package read in bounding-box from geotiff file and save to variable.  
+* Make pandas dataframe out of variable using geopandas or pandas.  
+* Make 3d plot out of dataframe using plotly.  
 
 <h2>Who:</h2>
 Lucas Kustermans aka Kustex

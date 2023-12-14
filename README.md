@@ -23,14 +23,16 @@ Using python<br>
 The geotiff file used in the script is located inside the k_13.zip.<br> 
 You can find it at: http://www.geopunt.be/download?container=dhm-vlaanderen-ii-dsm-raster-1m&title=Digitaal%20Hoogtemodel%20Vlaanderen%20II,%20DSM,%20raster,%201m</p>
 
-1. Clone the repository on your local device  
-2. Cd to the directory where the repo is located  
-3. Create new virtualenv or activate your virtualenv  
-4. run 'pip install -r requirements.txt' in your shell
-5. run 'mkdir data' in your shell
-6. Copy the DHVIIDSMRAS1m_k13.tif file from the k_13.zip to the 'data' folder   
-7. run 'python model_3d_house_project.py' in you shell  
-8. Take dms coordinates input(float) of user.  
+<ul>
+    <li>Clone the repository on your local device</li>
+    <li>Cd to the directory where the repo is located</li>
+    <li>Create new virtualenv or activate your virtualenv</li>
+    <li>run 'pip install -r requirements.txt' in your shell</li>
+    <li>run 'mkdir data' in your shell</li>
+    <li>Copy the DHVIIDSMRAS1m_k13.tif file from the k_13.zip to the 'data' folder</li>
+    <li>run 'python model_3d_house_project.py' in you shell</li>
+    <li>Take dms coordinates input(float) of user.</li>
+</ul>
 
 <h2>Flow of the script:</h2>
 <ul>
